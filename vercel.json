@@ -1,11 +1,20 @@
 {
   "version": 2,
   "functions": {
-    "api/parse.js": {
-      "runtime": "nodejs18.x"
+    "api/**/*.js": {
+      "runtime": "nodejs20.x"
     }
   },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
   "routes": [
-    { "src": "/api/parse", "dest": "/api/parse.js" }
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
   ]
 }
