@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "buildCommand": "echo 'no build step'",
   "functions": {
     "api/parse.js": {
       "runtime": "nodejs20.x"
